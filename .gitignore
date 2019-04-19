@@ -1,0 +1,6 @@
+# Ignore local vagrant settings
+.vagrant/*
+Vagrantfile
+
+# Ignore local keys
+control.pub

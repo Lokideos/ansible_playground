@@ -1,0 +1,22 @@
+---
+- hosts: webserver
+  become: true
+  tasks:
+    - name: install web components
+      # apt: 
+      #   pkg:
+      #     - apache2
+      #     - libapache2-mod-wsgi
+      #     - python-pip
+      #     - python-virtualenv
+      apt:
+        name: "{{ item }}"
+        state: present 
+        update_cache: yes
+      loop:
+        - apache2
+        - libapache2-mod-wsgi
+        - python-pip
+        - python-virtualenv
+
+        

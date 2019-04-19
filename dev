@@ -1,0 +1,15 @@
+[all:vars]
+ansible_connection=ssh
+
+[loadbalancer]
+lb01 ansible_host=127.0.0.1 ansible_port=2200 ansible_user=vagrant ansible_ssh_private_key_file=/Users/lokideos/.ssh/vagrant_control
+
+[webserver]
+app01 ansible_host=127.0.0.1 ansible_port=2201 ansible_user=vagrant ansible_ssh_private_key_file=/Users/lokideos/.ssh/vagrant_control
+app02 ansible_host=127.0.0.1 ansible_port=2202 ansible_user=vagrant ansible_ssh_private_key_file=/Users/lokideos/.ssh/vagrant_control
+
+[database]
+db01 ansible_host=127.0.0.1 ansible_port=2203 ansible_user=vagrant ansible_ssh_private_key_file=/Users/lokideos/.ssh/vagrant_control
+
+[control]
+control ansible_connection=local
